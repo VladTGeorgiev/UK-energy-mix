@@ -29,7 +29,7 @@
     "typescript": "^3.6.2",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.9.0"
   },
   "jest": {
     "testRegex": "\\.(test|spec)\\.(j|t)sx?$",

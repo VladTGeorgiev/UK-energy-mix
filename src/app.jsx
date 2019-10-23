@@ -8,7 +8,8 @@ class App extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			data: {}
+			data: {},
+			width: window.innerWidth
 		};
 	};
 
@@ -48,7 +49,7 @@ class App extends Component {
 			);
 		} else {
 			return (
-				<Container>
+				<Container textAlign="center">
 					<Divider hidden />
 					<Header as="h1">UK Energy Mix</Header>
 					<Divider />
@@ -61,16 +62,17 @@ class App extends Component {
 						</Container>
 					) : (
 						<Container>
-							<Container className="dashboard">
+							<Container>
 								<Header as="h2">Fuel types overview</Header>
 								<Grid divided="vertically">
 									<Grid.Row columns={dashboardLayout}>
-										<Grid.Column />
-											<MixChart className="dashboard-chart" fuelData={output.generationmix} />
+										<Grid.Column>
+											<MixChart fuelData={output.generationmix} />
+										</Grid.Column>
 										<Grid.Column>
 											<Divider hidden />
 											<Divider hidden />
-											<Label className="dashboard-date">
+											<Label>
 												<Divider hidden fitted />
 												<Icon name="time" />
 												Values for the period
@@ -90,8 +92,9 @@ class App extends Component {
 							</Container>
 							<Header as="h2">Fuel types sorted by percentage energy generated</Header>
 							<Divider hidden />
+							<FuelCard fuelSource={output.generationmix} windowWidth={this.state.width} />
 						</Container>
-					)}
+					)};
 				</Container>
 			);
 		};
