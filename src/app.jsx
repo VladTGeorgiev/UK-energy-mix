@@ -66,6 +66,7 @@ class App extends Component {
 								<Grid divided="vertically">
 									<Grid.Row columns={dashboardLayout}>
 										<Grid.Column />
+											<MixChart className="dashboard-chart" fuelData={output.generationmix} />
 										<Grid.Column>
 											<Divider hidden />
 											<Divider hidden />
@@ -93,8 +94,8 @@ class App extends Component {
 					)}
 				</Container>
 			);
-		}
-	}
-}
+		};
+	};
+};
 
 export { App };
