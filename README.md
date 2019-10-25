@@ -66,10 +66,5 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 * If you have made any changes that require us to do more than just an `npm install` and `npm start` to run your solution then please make this clear in the readme
 * Let your agent know that you're done and we will take a look in GitHub
 
-Semantic UI
-Recharts
-//npm install --save-dev @babel/plugin-proposal-class-properties
-npm install --save-dev webpack-dev-server
-
 
 

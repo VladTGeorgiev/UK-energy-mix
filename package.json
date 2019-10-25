@@ -2,11 +2,13 @@
   "private": true,
   "scripts": {
     "test": "jest **/*.test.js*",
+    "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server --hot --progress --colors"
   },
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.11.0",
     "recharts": "^1.8.5",
     "semantic-ui-react": "^0.88.1"
   },
@@ -23,13 +25,14 @@
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
+    "jest-fetch-mock": "^2.1.2",
     "jest-transform-stub": "^2.0.0",
     "mini-css-extract-plugin": "^0.8.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.6.2",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.8.0"
   },
   "jest": {
     "testRegex": "\\.(test|spec)\\.(j|t)sx?$",
@@ -45,6 +48,10 @@
       "tsx",
       "js",
       "jsx"
+    ],
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
     ]
   }
 }

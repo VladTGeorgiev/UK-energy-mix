@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard should render Loading screen when there is no data loaded 1`] = `
+<div
+  className="ui center aligned container"
+>
+  <div
+    className="ui hidden divider"
+  />
+  <h1
+    className="ui header"
+  >
+    UK Energy Mix
+  </h1>
+  <div
+    className="ui divider"
+  />
+  <div
+    className="ui container"
+  >
+    <div
+      className="ui hidden divider"
+    />
+    <div
+      className="ui active transition visible inverted dimmer"
+      onClick={[Function]}
+    >
+      <div
+        className="content"
+      >
+        <div
+          className="ui large text loader"
+        >
+          Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
